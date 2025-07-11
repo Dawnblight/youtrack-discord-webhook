@@ -1,13 +1,87 @@
 
 module.exports = {
-    YOUTRACK_URL: "https://youtrack.jetbrains.com/",
-    SITE_NAME: "My YouTrack",
-
-    WEBHOOK_URL: "https://discord.com/api/webhooks/XXX",
-    SENDER_NAME: "YouTrack",
-    AVATAR_URL: "https://pbs.twimg.com/profile_images/1206619676035469312/oXBhRETv.jpg",
-
-    COLOR_POSITIVE: "22C55E",
-    COLOR_REGULAR: "3093D1",
-    COLOR_NEGATIVE: "EF4444"
+    YOUTRACK_URL: "https://your-youtrack-instance.com/",  // Replace with your YouTrack URL
+    SITE_NAME: "Your Project Name",                       // Replace with your project name
+    
+    WEBHOOK_URL: "YOUR_DISCORD_WEBHOOK_URL_HERE",         // Your Discord webhook URL
+    SENDER_NAME: "YouTrack Bot",
+    AVATAR_URL: "https://resources.jetbrains.com/storage/products/youtrack/img/meta/youtrack_logo_300x300.png",
+    
+    // Discord embed colors
+    COLOR_POSITIVE: 0x00D26A,    // Green for resolved issues
+    COLOR_NEGATIVE: 0xF93A2F,    // Red for new issues  
+    COLOR_REGULAR: 0x5865F2,     // Discord blurple for updates
+    COLOR_WARNING: 0xFEE75C,     // Yellow for high priority
+    COLOR_INFO: 0x00D9FF,        // Light blue for info
+    
+    // Visual customization
+    THUMBNAIL_URL: "https://resources.jetbrains.com/storage/products/youtrack/img/meta/youtrack_logo_300x300.png",
+    USER_AVATAR_URL: "https://cdn.discordapp.com/embed/avatars/0.png",
+    
+    // Emoji sets for different contexts
+    EMOJIS: {
+        NEW_ISSUE: "🆕",
+        RESOLVED: "✅", 
+        UPDATED: "🔄",
+        COMMENT: "💬",
+        ASSIGNED: "👤",
+        PRIORITY: "⚠️",
+        // Priority levels (matching your YouTrack setup)
+        SHOWSTOPPER: "🚨",  // Highest priority - emergency
+        CRITICAL: "🔴",     // Critical issues
+        MAJOR: "🟠",        // Major priority
+        NORMAL: "🔵",       // Normal priority  
+        MINOR: "🟢",        // Minor priority
+        // For backwards compatibility
+        HIGH: "🟠", 
+        MEDIUM: "🔵",
+        LOW: "🟢",
+        // Status indicators
+        OPEN: "🔓",
+        IN_PROGRESS: "⚡",
+        TESTING: "🧪",
+        DONE: "✅",
+        // Type indicators
+        BUG: "🐛",
+        FEATURE: "⭐",
+        TASK: "📋",
+        EPIC: "🎯",
+        IMPROVEMENT: "🔧",      // New type
+        USER_STORY: "👥",      // New type
+        // Category indicators
+        GAMEPLAY_MECHANICS: "🎮",
+        STORY_NARRATIVE: "📖",
+        USER_INTERFACE: "🖥️",
+        PERFORMANCE_TECHNICAL: "⚙️",
+        ART_VISUAL: "🎨",
+        AUDIO_MUSIC: "🎵",
+        WORLDBUILDING: "🌍",
+        OTHER: "📝"
+    },
+    
+    // Simple visual elements
+    VISUAL_ELEMENTS: {
+        ARROW: "→",
+        DOT: "•"
+    },
+    
+    // Priority color mapping
+    PRIORITY_COLORS: {
+        "Show-stopper": 0x8B0000,  // Dark red - emergency (exact match for YouTrack)
+        "Showstopper": 0x8B0000,   // Backup without hyphen
+        "Critical": 0xFF0000,      // Bright red
+        "Major": 0xFF6B00,         // Orange
+        "Normal": 0xFFD700,        // Gold/Yellow
+        "Minor": 0x00FF00          // Green
+    },
+    
+    // Type color mapping
+    TYPE_COLORS: {
+        "Bug": 0xFF4444,           // Red for bugs
+        "Feature": 0x00AA55,       // Green for new features
+        "Task": 0x5865F2,          // Discord blue for tasks
+        "Epic": 0x9B59B6,          // Purple for epics
+        "Improvement": 0xFF8C00,   // Dark orange for improvements
+        "User Story": 0x1E90FF     // Dodger blue for user stories
+    }
 };

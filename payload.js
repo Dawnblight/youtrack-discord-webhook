@@ -1,7 +1,7 @@
 const http = require("@jetbrains/youtrack-scripting-api/http");
 
 /**
- * Represents an Payload sent by a Discord webhook.
+ * Represents a Payload sent by a Discord webhook.
  */
 class Payload {
     /**
@@ -21,22 +21,30 @@ class Payload {
     /**
      * @param {string} message
      */
-    set message(message) {this._message = message;}
+    set message(message) {
+        this._message = message;
+    }
 
     /**
      * @param {string} username
      */
-    set username(username) {this._username = username;}
+    set username(username) {
+        this._username = username;
+    }
 
     /**
      * @param {string} avatarUrl
      */
-    set avatarUrl(avatarUrl) {this._avatarUrl = avatarUrl;}
+    set avatarUrl(avatarUrl) {
+        this._avatarUrl = avatarUrl;
+    }
 
     /**
      * @param {Embed[]} embeds
      */
-    set embeds(embeds) {this._embeds = embeds;}
+    set embeds(embeds) {
+        this._embeds = embeds;
+    }
 
     /**
      * Adds an Embed to the webhook Payload.
@@ -69,8 +77,7 @@ class Payload {
         try {
             let response = connection.postSync("", null, JSON.stringify(this));
             if (!response.isSuccess) console.warn("Discord webhook payload failed to send.\n" + response.toString());
-        }
-        catch(exception) {
+        } catch (exception) {
             console.error(exception);
         }
     }
